@@ -1,621 +1,1220 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>BGMI eSports</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Russo+One&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Russo+One&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Russo+One&display=swap" rel="stylesheet">
-<link href="https://api.fontshare.com/v2/css?f[]=supreme@400&f[]=bespoke-stencil@700&display=swap" rel="stylesheet">
-
+    <title>Flight-booking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    
-    <div class="top-para">
-        <p class="top-text">BGMI eSports is the ultimate battelfield where skill, strategy, and determination create champions.</p>
+    <div id="nav-card">
+        <div id="overlay-2"></div>
+        <div class="container">
+            <div id="nav-container">
+                <div id="logo-img">
+                    <span style="font-size:24px;font-weight: bold;color: #4169e1;position: relative;">LOGO</span>
+                </div>
+                <div id="img-container">
+                    <nav id="nav">
+                        <a href="#"><i style="color: #4169e1;" class="fa-solid fa-calendar-days"></i> Book</a>
+                        <a href="#"><i style="color: #4169e1;" class="fa-solid fa-plane"></i> Trip</a>
+                        <a href="#"><i style="color: #4169e1;" class="fa-solid fa-location-dot"></i> Check-in</a>
+                        <a href="#"><i style="color: #4169e1;" class="fa-solid fa-gift"></i> Rewards</a>
+                    </nav>
+                </div>
+                <div>
+                    <button id="login-container">Login</button>
+                </div>
+            </div>
+        </div>
     </div>
+
     <style>
-        body{
-            background-color:#1e1e1e;
-        }
-        h1,h2,h3,h4,h5{
-            font-family: 'Bespoke Stencil', sans-serif;
-        }
-        p{
-            font-family: "Roboto", serif;
-        }
-        h1{
-            font-size:48px;
-        }
-        .top-text{
-            color:black;text-align:center;padding:12px;background:#ffb800;font-weight:bold;font-size:20px;
-        }
-        nav a{
-            text-decoration:none;
-            color:#888888;
-            margin-inline:24px;
-            font-weight:500;
-        }  
-        .button-1{
-            border:none;
-            border-radius:6px;
-            color: #d4d4d4;
-            background:transparent;
-            padding:4px 12px;
-            font-weight:500;
-            margin-right:4px;
-            font-weight:500;
-        }
-        .button-2{
-            border:1px solid white;
-            border-radius:4px;
-            color:white;
-            padding:4px 12px;
-            font-weight:500;
-            background:transparent;
-            font-weight:500;
-        }
-        .background-head{
-            height:90vh;
+        #nav a {
+            text-decoration: none;
+            margin: 0px 40px;
+            color: #3a3a3a;
             position: relative;
         }
-        .head-text{
-            position:absolute;
-            top:50%;
-            left:50%;
-            transform:translate(-50%,-50%);
+
+        #login-container {
+            color: white;
+            background: #4169e1;
+            padding: 8px 20px;
+            border-radius: 20px;
+            border: none;
+            position: relative;
         }
-        .background-head{
-           position: relative;
-           width:100%;
-           height:100vh;
-           display:flex;
-           align-items:center;
-           justify-content:center;
-           overflow:hidden;
-        }
-        .video-back video{
-            position:absolute;
-            top:0;
-            left:0;
-            right:0;
-            width:100%;
-            height:auto;
-            background-size:cover;
-        }
-        .overlay{
-            position: absolute;
-            background:rgba(0,0,0,0.5);
-            top:0;
-            right:0;
-            left:0;
-            bottom:0;
-        }
-        a:hover i{
-            scale:1.1;
-            padding-left:12px;
-        }
-        i{
-            transition:0.3s;
-        }
-        .raise-flex{
-            display:flex;
-            justify-content:space-between;
-            gap:px;
-        }
-        .jonny-card{
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            padding:16px;
-            border:1px solid #eaeaea;border-radius:10px;
-            background:black;
-            box-shadow:0px 6px 15px rgba(0, 0, 0, 0.7);
-        }
-        .review-container{
-            border:1px solid white;
-            padding:16px;
-            border-radius:10px;
-            background:black;box-shadow:0px 6px 15px rgba(0, 0, 0, 0.7);
-        }
-        .review-container-out{
-            display:flex;
-            justify-content:space-between;
-            gap:px;
-        }
-        .about-jony-container{
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            gap:32px;
-            margin-block:24px;
-        }
-        a{
-            text-decoration:none;
-            margin-right:40px;
-        }
-        .head-container{
+
+        #nav-container {
             display: flex;
-            justify-content:space-between;
-           margin-top:40px; 
-           margin-bottom:0px;
-           
-        }
-        .heading-2{
-            color: #eaeaea;text-align:center;margin-top:40px;font-weight:bold;margin-bottom:20px;
-        }
-        .Heading-2-top{
-            display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
+        }
+
+        #nav-card {
+            background: transparent;
+            padding-block: 16px;
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(10px);
+        }
+
+        #overlay-2 {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.6);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+    <div class="container">
+        <div class="hi">
+            <p style="margin-top:30px;" class="what-offer">Hi there, where would you like to <b><span>Go</span></b>
+                today?</p>
+        </div>
+    </div>
+    <div class="container">
+        <div id="main-head">
+            <button id="book-container">Book a flight</button>
+            <section id="input-section">
+                <div id="wrapper-trip">
+                    <div id="trip-container">
+                        <div id="er">
+                            <input type="radio" name="trip">One Way
+                        </div>
+                        <div id="qw">
+                            <input type="radio" name="trip">Round Trip
+                        </div>
+                        <div id="as">
+                            <input type="radio" name="trip">Multi city
+                        </div>
+                    </div>
+                    <div id="select">
+                        <select name="currency" id="">
+                            <option value="INR" selected>₹INR</option>
+                            <option value="INR">USD</option>
+                            <option value="INR">CAD</option>
+                            <option value="INR">EURO</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="trip-customiser">
+                    <div class="customiser">
+                        <div class="gapping">
+                            <span class="span-top">From</span>
+                            <b class="between">Delhi,DEL</b>
+                            <span class="span-bottom">Indra Gandhi International Air...</span>
+                        </div>
+                    </div>
+                    <div class="customiser">
+                        <div class="gapping">
+                            <span class="span-top">To</span>
+                            <b class="between-2-4">Going to?</b>
+                            <span class="span-bottom">Search by Place/Airport</span>
+                        </div>
+                    </div>
+                    <div style="width:100px;" class="customiser">
+                        <div class="gapping">
+                            <span class="span-top">Departure</span>
+                            <b class="between">02 Jan</b>
+                            <span class="span-bottom">Thrusday</span>
+                        </div>
+                    </div>
+                    <div style="width:150px;" class="customiser">
+                        <div class="gapping">
+                            <span class="span-top">Return</span>
+                            <b class="between-2-4">Save more</b>
+                            <span class="span-bottom">Add Return</span>
+                        </div>
+                    </div>
+                    <div style="width:180px;" class="customiser">
+                        <div class="gapping">
+                            <span class="span-top">Travellers+Special Fares</span>
+                            <b class="between">1 Passengers</b>
+                            <span class="span-bottom">Add Passengers</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="t-p-l-a">
+                    <article id="travel-pay">
+                        <div id="travel-container-outside">
+                            <div class="travel-container">
+                                <span class="span-bottom">I am travelling for
+                                    <select name="traveller" id="">
+                                        <option value="travel" selected>........</option>
+                                        <option value="travel">Leisure</option>
+                                        <option value="travel">Work</option>
+                                        <option value="travel">Medical</option>
+                                    </select>
+                                </span>
+                            </div>
+                        </div>
+
+
+                        <div id="pay-container-outside">
+                            <div class="pay-container">
+                                <span class="span-bottom">Pay With
+                                    <select name="traveller" id="">
+                                        <option value="travel" selected>Cash</option>
+                                        <option value="travel">Cash</option>
+                                        <option value="travel">Online</option>
+                                        <option value="travel">UPI</option>
+                                    </select>
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article id="link-button">
+                        <div id="Add">
+                            <a style="font-weight: bold;" href="#">+ ADD PROMOCODE</a>
+                        </div>
+
+                        <div id="search-button">
+                            <button id="button-container">Search</button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <style>
+        #book-container {
+            color: white;
+            background: #4169e1;
+            font-size: 16px;
+            font-weight: 400;
+            max-width: 1200px;
+            width: 100%;
+            border: none;
+            padding-block: 8px;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+        }
+
+        #wrapper-trip {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            padding: 0px 25px;
+            background: white;
+        }
+
+        .travel-container {
+            padding: 8px 16px;
+            box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.1);
+            display: flex;
+            border-radius: 8px;
+            background: white;
+        }
+
+        .pay-container {
+            padding: 8px 16px;
+            box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.1);
+            width: 150px;
+            display: flex;
+            border-radius: 8px;
+            background: white;
+        }
+
+        #button-container {
+            color: white;
+            font-size: 16px;
+            background: #4169e1;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 30px;
+        }
+
+        #travel-pay {
+            display: flex;
+            gap: 32px;
+        }
+
+        #link-button {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        #t-p-l-a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 8px;
+            padding: 0px 25px;
+            background: white;
+        }
+
+        #input-section {
+            background: white;
+            padding: 25px 0px;
+            border-bottom-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+        }
+
+        .customiser {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-block: 24px;
+            box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.1);
+            border-collapse: collapse;
+            width: 250px;
+            border-radius: 8px;
+            flex-grow: 1;
+        }
+
+        .gapping {
+            margin-left: 16px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #trip-customiser {
+            display: flex;
+            background: white;
+            padding: 0px 25px;
+            flex-wrap: wrap;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .span-top {
+            font-size: 12px;
+            color: #8b8787;
+            margin-bottom: 8px;
+        }
+
+        .between {
+            font-size: 18px;
+            color: #4169e1;
+            margin-bottom: 4px;
+        }
+
+        .between-2-4 {
+            font-size: 16px;
+            color: #3a3a3a;
+            margin-bottom: 4px;
+        }
+
+        .span-bottom {
+            font-size: 16px;
+            color: #808080;
+            font-weight: lighter;
+        }
+
+        #main-head {
+            box-shadow: 0 3px 30px 0 rgb(0 0 0 / 10%);
+        }
+
+        body {
+            background: #f2f2f2;
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        select {
+            padding: 4px 8px;
+            border-radius: 4px;
+            color: #4169e1;
+        }
+
+        #trip-container {
+            display: flex;
         }
     </style>
 
     <div class="container">
-        <nav
-        class="navbar navbar-expand-lg"
-    >
+        <div id="carder">
+            <img style="max-width: 383px;width: 100%;"
+                src="https://rukmini-ct.flixcart.com/w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/BSB_CTMHSPL-min%20(1).jpg"
+                alt="">
+            <img style="max-width: 383px;width: 100%;"
+                src="https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/BSB_AXISEMI_F_11zon.png"
+                alt="">
+            <img style="max-width: 383px;width: 100%;"
+                src="https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/BSB_%20CTASTANA%20(1).jpg"
+                alt="">
+        </div>
+    </div>
+
+    <style>
+        #carder {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+    </style>
+
+    <div id="offer-heading">
         <div class="container">
-            <a class="navbar-brand ms-0" href="#"><img class="top-logos" src="https://esports.battlegroundsmobileindia.com/images/krafton-logo.svg" alt="">
-                <img class="top-logos" style="margin-left:16px;" src="https://esports.battlegroundsmobileindia.com/images/BGMI%20logo%202%201.svg" alt=""></a>
-            
-            <button
-                style="border:1px solid white;"
-                class="navbar-toggler d-lg-none"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapsibleNavId"
-            >
-                <span ><i style="color:white;" class="fa-solid fa-bars"></i></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavId">
-                <ul class="navbar-nav me-auto mt-2 mt-lg-0 ">
-                    <li class="nav-item">
-                        <a style="color: #d4d4d4;font-weight:bold;" class="nav-link active" href="#" aria-current="page"
-                            >TOURNAMENTS
-                            <span class="visually-hidden">(current)</span></a
-                        >
-                    </li>
-                    <li class="nav-item">
-                        <a style="color: #d4d4d4;font-weight:bold;" class="nav-link" href="#">RANKINGS</a>
-                    </li>
-                    <li>
-                    <a style="color: #d4d4d4;font-weight:bold;" class="nav-link active" href="#" aria-current="page"
-                            >VIDEOS
-                            <span class="visually-hidden">(current)</span></a
-                        >
-                    </li>
-                        <div
-                            class="dropdown-menu"
-                            aria-labelledby="dropdownId"
-                        >
-                            <a class="dropdown-item" href="#"
-                                >Action 1</a
-                            >
-                            <a class="dropdown-item" href="#"
-                                >Action 2</a
-                            >
-                        </div>
-                    </li>
-                </ul>
-                <button class="button-1">
-                    Login
-                </button>
-                    <button
-                        class="button-2"
-                    >
-                        Sign up
-                    </button>
-                </form>
-            </div>
+            <h2 class="h2">What's Offer?</h2>
+            <p class="what-offer">Find <b><span>exclusive offers</span></b> and the best deals available for you.
+            </p>
         </div>
-    </nav>
     </div>
 
+    <style>
+        p {
+            color: #3a3a3a;
+        }
 
-    <div class="background-head mt-3" >
-    <video autoplay muted loop class="video-back">
-        <source src="videoplayback.mp4">
-    </video>
-    <div class="overlay"></div>
-    <div class="head-text" style="text-align:center;margin-top:30px;">
-        <img style="padding-bottom: 8px;" width="270px" src="b-logo.png" alt="">
-        <h1 style="color:#eaeaea;font-weight:bold;">Raise of Champions</h1>
-        <p style="color: #d4d4d4;;font-size:18px;">Rise of Champions. It's more than a game. It's legancy. Explore the stories behind the legends of BGMI esports, here.</p>
-    </div>
-    </div>
+        .h2 {
+            font-size: 24px;
+            margin-bottom: 0;
+            margin-top: 40px;
+        }
 
-<div class="container">
-<div class="head-container">
-<div class="bgmi-img">
-    <img style="max-width:300px;width:100%;" src="bgmi.png" alt="">
-</div>
-<div class="texts">
-    <h2 class="review-head" style="color:#eaeaea;font-size:40px;font-weight:bold;">100M+</h2>
-    <p class="review-pa" style="color:#d4d4d4;font-size:20px;font-weight:bold;">Downloads</p>
-</div>
-<div class="texts">
-    <h2 class="review-head" style="color:#eaeaea;font-size:40px;font-weight:bold;">4.3 <i style="color:#eaeaea;font-size:32px;" class="fa-solid fa-star"></i></h2>
-    <p class="review-pa" style="color:#d4d4d4;font-size:18px;font-weight:bold;">65L reviews</p>
-</div>
-<div class="texts">
-    <h2 class="review-head" style="color:#eaeaea;font-size:40px;font-weight:bold;">16+</h2>
-    <p class="review-pa" style="color:#d4d4d4;font-size:18px;font-weight:bold;">Rated for 16+</p>
-</div>
-</div>
-    <div class="Heading-2-top">
-        <img class="om-img" style="max-width:250px;width:100%;transform:rotateY(180deg);" class="img-fluid" src="om-2-img.png" alt="">
-    <div class="heading-2">
-    <h2 class="heading-2">The Evolution of BGMI eSports</h2>
-    </div>
-    <img class="om-img" style="max-width:250px;width:100%;" src="om-2-img.png" alt="">
-    </div>
-    </div>
-</div>
-</div>
-    
+        .what-offer {
+            font-size: 32px;
+            margin-top: 8px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        span {
+            color: #4169e1;
+        }
+
+        #offer-heading {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+
     <div class="container">
-    <div class="row gx-0 g-3">
-    <div class="col-12 col-md-4 d-flex">
-            <div class="card p-3 h-100 w-100"  style=" background:black;border:1px solid white;box-shadow:0px 6px 15px rgba(0, 0, 0, 0.7);">
-                <img class="card-img-top" src="https://esportsinsider.com/wp-content/uploads/2023/09/PMCO-Star-Challenge-2019-image-min.png" alt="">
-                <div class="card-body">
-                    <h5 class="card-title" style="color:#eaeaea;font-weight:bold;">PUBG Mobile eSports (Before Ban)</h5>
-                    <p class="card-text" style="color:#888888;">PUBG Mobile kickstarted the eSports revolution in India, with Tournaments 
-                                         like <span style="color:white;"> PMIS, PMCO, and PMWL</span> providing a platform for raising talent to <span style="color:white;">....</span>
-                    </p>
-                    <a style="color:#ecc371;text-decoration:none;" href="#" class="">Read more <i style="margin-left:4px;" class="fa-solid fa-arrow-right"></i></a>
+        <section id="section-1">
+            <div id="display">
+                <div class="offer-card-2">
+                    <img class="images" src="https://cdn.pixabay.com/photo/2014/07/21/19/20/lobby-398845_1280.jpg"
+                        alt="">
+                    <div class="offer-card-1">
+                        <div class="terms">
+                            <p>T&C's APPLY</p>
+                        </div>
+                        <div class="heading-3">
+                            <h3>INDULGE ART OF STAYCATION AT TAJ:</h3>
+                        </div>
+                        <div class="para-of-3">
+                            <p>Enjoy Hotel Credit for F&B and Spa + Excluive
+                                Savings.</p>
+                        </div>
+                        <div class="book-view">
+                            <a href="#">Book Now</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-    <div class="col-12 col-md-4 d-flex">
-            <div class="card p-3 h-100 w-100"  style="background:black;border:1px solid white;box-shadow:0px 6px 15px rgba(0, 0, 0, 0.7);">
-                <img class="card-img-top" src="background-bgmi-1.jpg" alt="">
-                <div class="card-body">
-                    <h5 class="card-title" style="color:#eaeaea;font-weight:bold;">BGMI Launch & Early eSports Scene</h5>
-                    <p class="card-text" style="color:#888888;">A year after PUBG Mobile ban, BGMI (Battelgrounds Mobile India) was introduced,
-                                                                  reignitind hope for Indian gamers. With its launch, the  <span style="color:white;">....</span>
-                                                                  
-                    </p>
-                    <a style="color:#ecc371;text-decoration:none;" href="#" class="">Read more <i style="margin-left:4px;" class="fa-solid fa-arrow-right"></i></a>
+                <div class="offer-card-2">
+                    <img class="images" src="https://cdn.pixabay.com/photo/2012/11/21/10/24/building-66789_1280.jpg"
+                        alt="">
+                    <div class="offer-card-1">
+                        <div class="terms">
+                            <p>T&C's APPLY</p>
+                        </div>
+                        <div class="heading-3">
+                            <h3>Book Ginger Hotel & Enjoy</h3>
+                        </div>
+                        <div class="para-of-3">
+                            <p>Room Upgrades Up to,20% OFF on F&B and More!</p>
+                        </div>
+                        <div class="book-view">
+                            <a href="#">Book Now</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            </div>
-         
-    <div class="col-12 col-md-4 d-flex">
-            <div class="card p-3 h-100 w-100"  style="background:black;border:1px solid white;box-shadow:0px 6px 15px rgba(0, 0, 0, 0.7);">
-                <img class="card-img-top" src="https://esportsinsider.com/wp-content/uploads/2023/06/skyesports-scs-bgmi-2023-large.jpg" alt="">
-                <div class="card-body">
-                    <h5 class="card-title" style="color:#eaeaea;font-weight:bold;">Major Tournaments and Milestones</h5>
-                    <p class="card-text" style="color:#888888;">Over the years, BGMI eSports has seen tremendous growth, with numerous major tournaments that have
-                                                                  not only showcased the incredible skills of<span style="color:white;">....</span> 
-                                                                  
-                    </p>
-                    <div class="hover-effect">
-                    <a style="color:#ecc371;text-decoration:none;" href="#" class="">Read more <i style="margin-left:4px;" class="fa-solid fa-arrow-right"></i></a>
+
+                <div class="offer-card-2">
+                    <img class="images" src="https://cdn.pixabay.com/photo/2017/03/09/06/30/pool-2128578_1280.jpg"
+                        alt="">
+                    <div class="offer-card-1">
+                        <div class="terms">
+                            <p>T&C's APPLY</p>
+                        </div>
+                        <div class="heading-3">
+                            <h3>For Your Perfect Winter Escape:</h3>
+                        </div>
+                        <div class="para-of-3">
+                            <p>Book Eco Retreat Hotels in Odisha and Enjoy. </p>
+                        </div>
+                        <div class="book-view">
+                            <a href="#">Book Now</a>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div id="display-2">
+                <div class="offer-card-2">
+                    <img class="images" src="https://cdn.pixabay.com/photo/2021/12/11/07/59/hotel-6862159_1280.jpg"
+                        alt="">
+                    <div class="offer-card-1">
+                        <div class="terms">
+                            <p>T&C's APPLY</p>
+                        </div>
+                        <div class="heading-3">
+                            <h3>Grab FLAT 15% OFF on 5 Star Stays in India.</h3>
+                        </div>
+                        <div class="para-of-3">
+                            <p>for your next International trip. </p>
+                        </div>
+                        <div class="book-view">
+                            <a href="#">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="offer-card-2">
+                    <img class="images" src="https://cdn.pixabay.com/photo/2023/07/24/01/31/plane-8145957_1280.jpg"
+                        alt="">
+                    <div class="offer-card-1">
+                        <div class="terms">
+                            <p>T&C's APPLY</p>
+                        </div>
+                        <div class="heading-3">
+                            <h3>Grab upto 7500 rupees OFF </h3>
+                        </div>
+                        <div class="para-of-3">
+                            <p>Avail zero cancellation Free* date change. </p>
+                        </div>
+                        <div class="book-view">
+                            <a href="#">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="offer-card-2">
+                    <img class="images"
+                        src="https://cdn.pixabay.com/photo/2021/12/13/07/06/airplane-6867678_1280.jpg"" alt="">
+<div class=" offer-card-1">
+                    <div class="terms">
+                        <p>T&C's APPLY</p>
+                    </div>
+                    <div class="heading-3">
+                        <h3>SUPERSAVER OFFER:Up to 50% OFF.</h3>
+                    </div>
+                    <div class="para-of-3">
+                        <p>on Domestic Flights </p>
+                    </div>
+                    <div class="book-view">
+                        <a href="#">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <style>
+        .images {
+            width: 120px;
+            height: 150px;
+            border-radius: 8px;
+        }
+
+        .terms {
+            font-size: 12px;
+            margin-bottom: 0;
+        }
+
+        .heading-3 {
+            font-size: 16px;
+        }
+
+        .para-of-3 {
+            font-size: 14px;
+        }
+
+        .book-view a {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            color: #4169e1;
+            display: flex;
+        }
+
+        .offer-card-2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            background: white;
+            width: 340px;
+            padding: 4px 16px;
+            border-radius: 8px;
+            box-shadow: 0 1px 6px 0 rgb(0 0 0 / 20%);
+        }
+
+        #display {
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 25px;
+        }
+
+        #display-2 {
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 25px;
+            margin-top: 20px;
+        }
+
+        #section-1 {
+            background: white;
+            padding: 25px 0px;
+            border-radius: 8px;
+            box-shadow: 0 3px 30px 0 rgb(0 0 0 / 10%);
+        }
+    </style>
+
+    <div class="container">
+        <section id="section-2">
+            <div class="img-text-card">
+                <div class="three-card-img">
+                    <img width="60px"
+                        src="https://static.vecteezy.com/system/resources/thumbnails/013/787/630/small_2x/commercial-jet-plane-airliner-flying-png.png"
+                        alt="">
+                </div>
+                <div class="text-1-card">
+                    <p class="three-card-text-1">Planning to book an international</p>
+                    <p class="three-card-text-2">Check Travel Guidelines</p>
+                </div>
+            </div>
+
+            <div class="img-text-card">
+                <div class="three-card-img">
+                    <img width="60px"
+                        src="trans-logo.png"
+                        alt="">
+                </div>
+                <div class="text-1-card">
+                    <p class="three-card-text-1">We are also available in Hindi!</p>
+                    <p class="three-card-text-2">Change Language</p>
+                </div>
+            </div>
+
+            <div class="img-text-card">
+                <div class="three-card-img">
+                    <img width="60px"
+                        src="https://png.pngtree.com/png-vector/20230218/ourmid/pngtree-laptop-icon-png-image_6606927.png"
+                        alt="">
+                </div>
+                <div class="text-1-card">
+                    <p class="three-card-text-1">Complete your web check-in</p>
+                    <p class="three-card-text-2">Know More</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <style>
+        .three-card-text-1 {
+            font-size: 16px;
+            margin-bottom: 0px;
+
+        }
+
+        .three-card-text-2 {
+            font-size: 16px;
+            color: #4169e1;
+            margin-top: 4px;
+        }
+
+        .img-text-card {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            background: white;
+            width: 360px;
+            justify-content: center;
+            padding: 4px 0px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%);
+            transition: all 0.5s;
+        }
+
+        #section-2 {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0px;
+            gap: 16px;
+        }
+
+        .img-text-card:hover {
+            scale: 1.1;
+        }
+    </style>
+
+    <div class="container">
+        <div id="login-div">
+            <div id="overlay"></div>
+            <section id="section-7">
+                <article id="login-article">
+                    <div id="login">
+                        <h2 style="font-weight: bolder;">Sign-Up</h2>
+                    </div>
+                    <div id="input-field">
+                        <div class="input-edit">
+                            <input class="input" type="text" name="" placeholder="Email/Phone no.">
+                        </div>
+                        <div class="input-edit">
+                            <input class="input" type="password" name="" placeholder="Password">
+                        </div>
+                        <div class="input-edit">
+                            <input class="input" type="password" name="" placeholder="Confirm Password">
+                        </div>
+                        <div id="login-button">
+                            <button id="button-size"><b>SIGN-UP</b></button>
+                        </div>
+                    </div>
+                </article>
+            </section>
         </div>
     </div>
-</div>
-</div>
- <div>
-    <h2 style="color:#eaeaea;text-align:center;font-weight:bold;margin-top:48px;margin-bottom:32px;">Jonathan-The Undisputed Clutch Master</h2>
- </div>
- <div class="container">
-    <div class="jonny-card">
- <div style="margin-left: 40px;">
-      <h2 style="color:#ecc371;font-size:24px;margin-bottom:0;">चल मार! चल नहीं होरा क्या?</h2>
-      <h2 style="color:#eaeaea;font-weight:bold;margin-bottom:0;margin-top:24px;">Godljonathan- The Clutch Master <br> of BGMI</h2>
-      <p style="color: #d4d4d4;margin-top:24px;margin-bottom:24px;">Jonathan clutches from 2019-2024</p>
-      <button style="border:1px solid #ecc371;background:transparent;color:#ecc371;padding:4px 12px;border-radius:4px;">Go watch now</button>
- </div>
- <div>
- <img style="border-radius:10px;" class="img-fluid" width="500px" height="270px" src="https://img.redbull.com/images/q_auto,f_auto/redbullcom/2021/11/29/vc7ejihdky2kiyyanf4f/jonathan-bgmi-gamer" alt="">
-</div>
-</div>
-</div>
 
-<div class="container"> 
-<div style="margin-block:40px;" class="jon-text-2 d-flex justify-content-center align-items-center  gap-4">
-<img style="margin-block:px;border-radius:10px;"class="img-fluid" width="500px" height="270px" src="https://media.assettype.com/afkgaming%2F2022-12%2F1f42e7d4-fe78-4ab4-9692-e83b33151a24%2FCover_Image___JONATHAN_Comes_Second_For_Esports_Mobile_Player_Of_The_Year_At_Esports_Awards_2022.jpg?auto=format%2Ccompress&dpr=1.0&w=1200" alt="">
-<div>
-<div class="jony-img">
-<h4 style="color:#eaeaea;font-weight:bold;margin-bottom:24px;">From Rookie to Pro-The Rise of Jonathan</h4>
-<p class="sub-paragraph" style="color:#d4d4d4;margin-top:0;">Jonathan Amaral, popularly known as Jonathan Gaming, is a renowned Indian BGMI eSports player famous for his "zero recoil"
-     mastery. Starting with PUBG Mobile, he rose to fame with Entity Gaming, showcasing exceptional skills in tournaments 
-     like PMCO Fall Split 2019. His aggressive gameplay and clutch performances earned him MVP titles, and he continued his
-      dominance with TSM-Entity. After PUBG's ban, he transitioned to BGMI, joining GodLike Esports.</p>
-</div>
-</div>
-</div>
-<div>
-<div class="jon-text d-flex justify-content-center align-items-center  gap-4">
-    <div>
-    <div class="jony-img">
-    <h4 style="color:#eaeaea;font-weight:bold;margin-bottom:24px;">Breaking Records, Winning Hearts</h4>
-    <p class="sub-paragraph" style="color:#d4d4d4;margin-top:0;">Jonathan Gaming has an impressive list of achievements in the eSports world. He was the MVP of PMIS 2020 and consistently
-         top-fragged in tournaments like PMCO Fall Split 2019, where his team secured top positions. Known for his "zero recoil" sprays,
-          he holds records for the highest kill counts in multiple BGMI events. With TSM-Entity, he dominated the Indian scene, and after
-           joining GodLike Esports, he continued to shine in BGIS 2021, securing top placements. Jonathan is also the first Indian player
-            to cross 100 MVP titles in official tournaments, solidifying his legacy in mobile gaming.</p>
+    <style>
+        .input {
+            width: 200px;
+            padding: 10px 16px;
+            border: none;
+            border-radius: 9px;
+            margin-left: 4px;
+            box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+            z-index: 999;
+        }
+
+        .input-edit {
+            margin-bottom: 16px;
+            z-index: 999;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        #login-button {
+            width: 240px;
+            z-index: 999;
+        }
+
+        #button-size {
+            width: 237px;
+            color: white;
+            background: #4169e1;
+            padding: 10px 16px;
+            border: none;
+            border-radius: 8px;
+            margin-top: 8px;
+            z-index: 999;
+        }
+
+        #section-7 {
+            background-color: white;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            margin: 30px;
+            z-index: 999;
+        }
+
+        #login-div {
+            display: flex;
+            justify-content: center;
+            background: url(https://img.pikbest.com/ai/illus_our/20230414/67807f0f570d82dddfc6e0be90e2fe89.jpg!sw800);
+            background-position: center;
+            height: 380x;
+            border-radius: 8px;
+            position: relative;
+            z-index: -1;
+            margin-bottom: 40px;
+        }
+
+        #overlay {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.300);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+    </style>
+
+    <div class="container">
+        <div class="section-3">
+            <h4 class="cheap" style="padding-left:25px; font-size:24px;">Cheapest Fares</h4>
+            <section class="section-3-half">
+                <div class="combination">
+                    <div class="state-img">
+                        <img style="width:270px;height: 150px; margin-bottom:-9px; border-top-left-radius:8px;
+            border-top-right-radius:8px;"
+                            src="https://travelsetu.com/apps/uploads/new_destinations_photos/destination/2024/01/08/198b0dae8dc5a05449527fd6108c6168_1000x1000.jpg"
+                            alt="">
+                    </div>
+                    <div class="join-2">
+                        <div class="state-name">
+                            <h3 style="margin-top:4px;margin-bottom:0">Bathinda, <span class="name">Punjab</span></h3>
+                        </div>
+
+                        <div class="join">
+                            <div class="state-footer">
+                                <p style="margin-bottom:0;">Mon, 03 feb</p>
+                                <h3 style="margin-top:0;">$126 <span class="foot">onwards</span></h3>
+                            </div>
+                            <div class="book-button">
+                                <button class="book-flight">Book Flight</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="combination">
+                    <div class="state-img">
+                        <img style="width:270px;height: 150px; margin-bottom:-9px; border-top-left-radius:8px;
+            border-top-right-radius:8px;"
+                            src="https://s7ap1.scene7.com/is/image/incredibleindia/city-palace-jaipur-rajasthan-1?qlt=82&ts=1726660027704"
+                            alt="">
+                    </div>
+                    <div class="join-2">
+                        <div class="state-name">
+                            <h3 style="margin-top:4px;margin-bottom:0">Jaipur, <span class="name">Rajasthan</span></h3>
+                        </div>
+
+                        <div class="join">
+                            <div class="state-footer">
+                                <p style="margin-bottom:0;">Sat, 09 Jan</p>
+                                <h3 style="margin-top:0;">$236 <span class="foot">onwards</span></h3>
+                            </div>
+                            <div class="book-button">
+                                <button class="book-flight">Book Flight</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="combination">
+                    <div class="state-img">
+                        <img style="width:270px;height: 150px; margin-bottom:-9px; border-top-left-radius:8px;
+            border-top-right-radius:8px;"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQeCA2YnVG40Sw0p0JLt-eylrn4MmQ0-5gYw&s"
+                            alt="">
+                    </div>
+                    <div class="join-2">
+                        <div class="state-name">
+                            <h3 style="margin-top:4px;margin-bottom:0">Leh, <span class="name">Ladakh</span></h3>
+                        </div>
+
+                        <div class="join">
+                            <div class="state-footer">
+                                <p style="margin-bottom:0;">wed, 26 dec</p>
+                                <h3 style="margin-top:0;">$274 <span class="foot">onwards</span></h3>
+                            </div>
+                            <div class="book-button">
+                                <button class="book-flight">Book Flight</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="combination">
+                    <div class="state-img">
+                        <img style="width:270px;height: 150px; margin-bottom:-9px;border-top-left-radius:8px; border-top-right-radius:8px;"
+                            src="https://cdn.britannica.com/28/170728-050-AD5F144B/Great-Imambara-Lucknow-Uttar-Pradesh-India.jpg"
+                            alt="">
+                    </div>
+                    <div class="join-2">
+                        <div class="state-name">
+                            <h3 style="margin-top:4px;margin-bottom:0">Lucknow, <span class="name">UP</span></h3>
+                        </div>
+
+                        <div class="join">
+                            <div class="state-footer">
+                                <p style="margin-bottom:0;">fri, 13 Mar</p>
+                                <h3 style="margin-top:0;">$286 <span class="foot">onwards</span></h3>
+                            </div>
+                            <div class="book-button">
+                                <button class="book-flight">Book Flight</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
-        <img class="img-fluid" style="border-radius:10px;" width="500px" height="270px" src="https://prod.assets.earlygamecdn.com/images/BGMI-Jonathan-Sensitivity-Settings.png?transform=banner_webp" alt="">
-</div>
-</div>
-<div style="margin-block: 40px;" class="jon-text-2 d-flex justify-content-between align-items-center gap-4">
-    <img class="img-fluid" style="border-radius:10px;" width="500px" height="270px" src="https://i.ytimg.com/vi/2YIGiMdFo9s/maxresdefault.jpg" alt="">
-<div>
-    <div class="jony-img">
-    <h4 style="color:#eaeaea;font-weight:bold;margin-bottom:24px;">More Than a Player-A Legacy in the Making</h4>
-    <p class="sub-paragraph" style="color:#d4d4d4;margin-top:0;">Jonathan Gaming is more than just a player; he’s a legacy in the making. His journey from casual gaming to becoming one of India’s top BGMI eSports
-         athletes showcases his unmatched skill, dedication, and passion. Known for his iconic "zero recoil" sprays and clutch performances, Jonathan has
-          redefined mobile gaming standards in India.
-           His impact extends beyond the battlefield, shaping the future of Indian eSports. As he continues to break records and set new benchmarks, Jonathan’s 
-           legacy as a gaming legend is just beginning.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="container">
-<div style="text-align:center;margin-top:48px;">
-    <img width="100px" src="godlike-logo.png" alt="">
-    <h2 style="color: #eaeaea;text-align:center;font-size:28px;font-weight:bold;margin-top: 24px;">GodLike Esports: Dominating the Indian eSports Scene</h2>
-    <p style="color:#d4d4d4;margin-top:24px;">GodLike Esports has become a household name in the Indian eSports scene, known for its exceptional gameplay and dominance in titles like BGMI. Founded
-         with the vision of creating a powerhouse, the team quickly rose to fame with top-tier players like Jonathan, ClutchGod, and Neyoo. Over the years,
-          GodLike has consistently outperformed in national tournaments, earning a reputation for strategic gameplay, teamwork, and raw talent. Their success
-           not only secured championships but also played a crucial role in elevating Indian eSports on the global map. Today, GodLike stands as a symbol of 
-           excellence, inspiring future generations of gamers across India.</p>
-</div>
-</div>
 
-<div class="container">
-    <div style="margin-top: 32px;" class="row gx-0 g-3">
-        <div class="col-6 col-lg-3  d-flex">
-            <div class="card h-100 w-100" style="width:30%;background:black; border-radius:10px;border:1px solid white;box-shadow:0px 6px 15px rgba(0, 0, 0, 0.7);">
-                <img height="300px" class="card-img-top" src="punk.jpg" alt="">
-                <h5 style="color:white; text-align:center;font-size:16px;" class="card-title mt-2 fw-semi-bold">Godlpunk <span style="font-weight:100;">(Igl)</span></h5>
+    <style>
+        .name {
+            font-weight: lighter;
+            color: black;
+        }
+
+        .foot {
+            font-weight: 200;
+            color: #3a3a3a;
+            font-size: 14px;
+        }
+
+        .book-flight {
+            color: #4169e1;
+            font-weight: bold;
+            border: 2px solid;
+            background: none;
+            padding: 8px 12px;
+            border-radius: 20px;
+        }
+
+        .cheap {
+            margin-bottom: 16px;
+            margin-top: 0;
+        }
+
+        .join {
+            display: flex;
+            justify-content: center;
+            gap: 49px;
+            width: 270px;
+            align-items: center;
+            padding-right: 16px;
+        }
+
+        .state-name {
+            padding: 0px 8px;
+        }
+
+        .join-2 {
+            width: 270px;
+            margin-top: 0;
+            background: white;
+            border-bottom-right-radius: 8px;
+            border-bottom-left-radius: 8px;
+            padding-top: 12px;
+        }
+
+        .combination {
+            box-shadow: 0 1px 6px 0 rgb(0 0 0 / 20%);
+            width: 270px;
+            border-bottom-right-radius: 8px;
+            border-bottom-left-radius: 8px;
+        }
+
+        .section-3-half {
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 25px;
+        }
+
+        .section-3 {
+            background: white;
+            padding: 25px 0px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%);
+            margin-bottom: 40px;
+        }
+    </style>
+
+    <div class="container">
+        <section id="section-4">
+            <article id="article-33">
+                <div id="div-daily">
+                    <div id="daily-2">
+                        <h2 style="color:white;margin-left:25px;" id="flights">2100+</h2>
+                        <p style="color:white;margin-left:25px;" id="daily">Daily Flights</p>
+                    </div>
+                </div>
+
+
+                <article id="article-11">
+                    <div style="margin-bottom:20px;" class="div-dome">
+                        <div style="margin-left:25px;" id="daily-3">
+                            <h2 style="font-size:32px;color:#4169e1;margin-bottom:0;">85+</h2>
+                            <p style="font-size:20px;color:#4169e1;margin-top:12px;">Domestic <br>
+                                Destination</p>
+                        </div>
+                    </div>
+
+
+                    <div class="div-dome">
+                        <div style="margin-left:25px; display: flex;flex-direction: column;" id="daily-4">
+                            <h2 style="font-size:32px;color:#4169e1;margin-bottom:0;">650 Mn+</h2>
+                            <p style="font-size:20px;color:#4169e1;margin-top:12px;">Happy <br>
+                                Customers</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article id="article-22">
+                    <div style="margin-bottom:20px;" class="div-dome">
+                        <div style="margin-left:25px;" id="daily-5">
+                            <h2 style="font-size:32px;color:#4169e1;margin-bottom:0;">31+</h2>
+                            <p style="font-size:20px;color:#4169e1;margin-top:12px;">International <br>
+                                Destination</p>
+                        </div>
+                    </div>
+
+
+                    <div class="div-dome">
+                        <div style="margin-left:25px;" id="daily-5">
+                            <h2 style="font-size:32px;color:#4169e1;margin-bottom:0;">400+</h2>
+                            <p style="font-size:20px;color:#4169e1;margin-top:12px;">Fleet<br>
+                                Strong</p>
+                        </div>
+                    </div>
+                </article>
+            </article>
+        </section>
+    </div>
+
+    <style>
+        #flights {
+            font-size: 56px;
+            color: white;
+        }
+
+        #daily {
+            font-size: 32px;
+        }
+
+        #daily-flights {
+            background: #4169e1;
+            max-width: 352.5px;
+            width: 100%;
+            padding-left: 25px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            border-radius: 16px;
+            box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        #div-daily {
+            background: #4169e1;
+            max-width: 352px;
+            width: 100%;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            border-radius: 16px;
+        }
+
+        .div-dome {
+            background: white;
+            width: 100%;
+            height: 140px;
+            display: flex;
+            align-items: center;
+            border-radius: 16px;
+            box-shadow: 0 1px 6px 0 rgba(85, 139, 225, 0.2);
+        }
+
+        #article-33 {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+        }
+
+        #section-4 {
+            background: white;
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 2px 4px 0 rgb(0 0 0 / 10%);
+            margin-bottom: 40px;
+        }
+
+        #daily-4 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #article-11,
+        #article-22 {
+            flex-grow: 1;
+        }
+    </style>
+
+    <div id="section-6">
+        <div class="container">
+            <div id="padding">
+                <section id="footer">
+                    <div id="company">
+                        <h4 style="color:white;">COMPANY</h4>
+                        <p style="color:white;">About us</p>
+                        <p style="color:white;">Leadership Team</p>
+                        <p style="color:white;">Investor Relations</p>
+                        <p style="color:white;">policy</p>
+                    </div>
+
+
+                    <div id="support">
+                        <h4>SUPPORT</h4>
+                        <p style="color:white;">Plan B</p>
+                        <p style="color:white;">Medical Assistance</p>
+                        <p style="color:white;">Seat Select</p>
+                        <p style="color:white;">Contact Us</p>
+                        <p style="color:white;">FAQ's</p>
+                    </div>
+
+                    <div id="quick-links">
+                        <h4 style="color:white;">QUICK LINKS</h4>
+                        <p style="color:white;">Tariff Sheet</p>
+                        <p style="color:white;">Offers</p>
+                        <p style="color:white;">Terms and Conditions</p>
+                        <p style="color:white;">International Flights</p>
+                    </div>
+
+                    <div id="media">
+                        <h4 style="color:white;">MEDIA</h4>
+                        <p style="color:white;">Press releases</p>
+                        <p style="color:white;">Our awards</p>
+                        <p style="color:white;">Hello 6E Magazine</p>
+                    </div>
+
+                    <div id="app">
+                        <h4 style="color:white;">DOWNLOAD APP</h4>
+                        <img width="120px" height="120px"
+                            src="https://www.goindigo.in/content/dam/s6web/in/en/assets/homepage-footer/QR-CODE.png"
+                            alt="">
+                        <p style="color:white;">iOS / Android</p>
+                    </div>
+                </section>
+
+                <hr>
+
+                <p style="text-align: center;color: white; padding:40px 0px; font-size:14px;margin-bottom: 0;">
+                    Project designed by Karan Maulekhi. Student of Arena Animation from Patel Nager</p>
             </div>
         </div>
-        <div class="col-6 col-lg-3  d-flex">
-            <div class="card h-100 w-100" style="width:30%;background:black;border-radius:10px;border:1px solid white;box-shadow:0px 6px 15px rgba(0, 0, 0, 0.7);">
-                <img height="300px" class="card-img-top" src="admino.jpg" alt="">
-                <h5 style="color:white; text-align:center;font-size:16px;" class="card-title mt-2  fw-semi-bold">Godladmino <span style="font-weight:100;">(Assaulter)</span></h5>
-            </div>
-        </div>
-        <div class="col-6 col-lg-3  d-flex">
-            <div class="card h-100 w-100" style="width:30%;background:black;border-radius:10px;border:1px solid white;box-shadow:0px 6px 15px rgba(0, 0, 0, 0.7);">
-                <img height="300px" class="card-img-top" src="z-god.jpg" alt="">
-                <h5 style="color:white; text-align:center;font-size:16px;" class="card-title mt-2  fw-semi-bold">GodlzGod <span style="font-weight:100;">(Supporter)</span></h5>
-        </div>
-        </div>
-        <div class="col-6 col-lg-3  d-flex">
-            <div class="card h-100 w-100" style="width:30%;background:black;border-radius:10px;border:1px solid white;box-shadow:0px 6px 15px rgba(0, 0, 0, 0.7);">
-                <img height="300px" class="card-img-top" src="jonny.jpg" alt="">
-                <h5 style="color:white; text-align:center;font-size:16px;" class="card-title mt-2  fw-semi-bold">Godljonathan  <span style="font-weight:100;">(Assaulter)</span></h5>
-        </div>
-        </div>
-        </div>
-        </div>
-        
+    </div>
 
-<div class="container">
-    <h2 style="color: #eaeaea; text-align:center;margin-top:48px;font-weight:bold;margin-bottom:0px;margin-top:48px;">Iconic Matches & Legendary Moments</h2>
-</div>
-
-<div class="container ">
-    <div style="margin-top: 32px;" class="row  align-items-center ">
-<div class="col-12 col-lg-6 ">
-    <iframe  style="width:100%;height:312px;border-radius:10px;" src="https://www.youtube.com/embed/rOGZLPAYOlM?si=vG3S3hlQzkR1g3YC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <h5 style="color:#eaeaea;font-weight:bold;margin-top:8px;">Shadow's Masterclass: Epic 1v4 Clutch Against Soul</h5>
-</div>
-<div  class="col-12 col-lg-6 ">
-    <iframe style="width:100%;height:312px;border-radius:10px;" src="https://www.youtube.com/embed/I0PPPnqSrUg?si=Kv6DDswmi6VeT61Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <h5 style="color:#eaeaea;font-weight:bold;margin-top:8px;">GodlLike vs Soul:Showdown BGMI ESL LAN 2025 Day 2</h5>
-</div>
-<div class="col-112 col-lg-6  mt-4">
-    <iframe style="width:100%;height:312px;border-radius:10px;"  src="https://www.youtube.com/embed/sonnlWyY9hM?si=c9KXPPVrQcaSjw64" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <h5 style="color:#eaeaea;font-weight:bold;margin-top:8px;">GODLIKE GOES SUPER SAIYAN MODE IN BGIS ROUNDS</h5>
-</div>
-<div class="col-12 col-lg-6 mt-4">
-    <iframe style="width:100%;height:312px;border-radius:10px;" src="https://www.youtube.com/embed/U9h-38A8A1Y?si=JCYfFfjkvBksIQzr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    <h5 style="color:#eaeaea;font-weight:bold;margin-top:8px;">Clips That Made Jonathan Famous😱🔥</h5>
-</div>
-</div>
-</div>
-
-<div class="container">
-<div>
-    <h2 style="color: #eaeaea;text-align:center;margin-top:48px;font-weight:bold;margin-bottom:32px;">Voices of Victory: Legends Speak</h2>
-</div>
-</div>
-
-<div class="container">
-<div class="row g-3">
-<div class="col-12 col-md-4">
-<div class="review-container h-100">
-<div style="display:flex;justify-content:space-between;align-items:center;margin:10px;" class="text-star">
-<div class="name-img d-flex align-items-center">
-<div class="review-img">
-    <img style="width:40px;height:40px;border-radius:50%;" src="https://t4.ftcdn.net/jpg/02/14/74/61/360_F_214746128_31JkeaP6rU0NzzzdFC4khGkmqc8noe6h.jpg" alt="">
-</div>
-<div class="name ms-2">
-     <span style="color:#d4d4d4;font-weight:bold;">Karan Maulekhi</span>
-</div>
-</div>
-<div class="star">
-    <i style="color:yellow;" class="fa-solid fa-star"></i> <i style="color:yellow;" class="fa-solid fa-star"></i> <i style="color:yellow;" class="fa-solid fa-star"></i> <i style="color:yellow;" class="fa-solid fa-star"></i> <i style="color:rgb(176, 176, 163);" class="fa-solid fa-star"></i>
-</div>
-</div>
-<p style="color:#d4d4d4;margin-top:16px;">As a BGMI player, I can confidently say that the gameplay is absolutely thrilling.
-     The realistic graphics, detailed maps, and smooth mechanics make every match 
-     feel intense and immersive. </p>
-</div>
-</div>
-<div class="col-12 col-md-4">
-<div class="review-container h-100">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px;" class="text-star">
-    <div class="name-img d-flex align-items-center">
-    <div class="review-img">
-        <img style="width:40px;height:40px;border-radius:50%;" src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg" alt="">
-    </div>
-    <div class="name ms-2">
-         <span style="color:#d4d4d4;font-weight:bold;">Lalit Rawat</span>
-    </div>
-    </div>
-    <div class="star">
-        <i style="color:yellow;" class="fa-solid fa-star"></i> <i style="color:yellow;" class="fa-solid fa-star"></i> <i style="color:yellow;" class="fa-solid fa-star"></i> <i style="color:yellow;" class="fa-solid fa-star"></i> <i style="color:rgb(176, 176, 163);" class="fa-solid fa-star"></i>
-    </div>
-    </div>
-    <p style="color:#d4d4d4;margin-top:16px;">What I love most about BGMI is how well it runs on my phone. The game is super optimized,
-         offering smooth performance even during intense fights. I’ve played on both mid-range and high-end devices, and the.... </p>
-    </div>
-</div>
-<div class="col-12 col-md-4">
-<div class="review-container h-100">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-top:10px;" class="text-star">
-        <div class="name-img d-flex align-items-center">
-        <div class="review-img">
-            <img style="width:40px;height:40px;border-radius:50%;" src="https://img.freepik.com/free-photo/smiley-man-relaxing-outdoors_23-2148739334.jpg?semt=ais_hybrid" alt="">
-        </div>
-        <div class="name ms-2">
-             <span style="color:#d4d4d4;font-weight:bold;">Sourabh Negi</span>
-        </div>
-        </div>
-        <div class="star">
-            <i style="color:yellow;" class="fa-solid fa-star"></i> <i style="color:yellow;" class="fa-solid fa-star"></i> <i style="color:yellow;" class="fa-solid fa-star"></i> <i style="color:yellow;" class="fa-solid fa-star"></i> <i style="color:rgb(176, 176, 163);" class="fa-solid fa-star"></i>
-        </div>
-        </div>
-        <p style="color:#d4d4d4;margin-top:16px;">Being part of the BGMI community feels amazing. The competitive scene is insane,
-             with tournaments like BGIS showcasing the best teams and players in action. Watching matches inspires me to improve
-              my skills. </p>
-        </div>
-    </div>
-</div>
-</div>
-</div>
-
-
-<div class="container">
-    <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgb(206, 194, 194);margin-bottom:40px;padding-bottom:40px;padding-top:80px;" class="logo-footer">
-    <div class="img">
-        <img src="https://esports.battlegroundsmobileindia.com/images/krafton-logo.svg" alt="">
-    </div>
-    <div class="footer-icons">
-        <i style="font-size:24px;color:#d4d4d4;" class="fa-brands fa-instagram"></i> <i style="font-size:24px;color:#d4d4d4;margin-inline:24px;" class="fa-brands fa-youtube"></i> <i style="font-size:24px;color:#d4d4d4;" class="fa-brands fa-x-twitter"></i>
-    </div>
-</div>
-<div class="footer-text" style="margin-bottom:30px;display:flex;" class="nav mx-0 px-0">
-     
-        <a style="color:#d4d4d4;font-weight:bold;" href="#">ABOUT BGMI</a>
-        <a style="color:#d4d4d4;font-weight:bold;" href="#">SUPPORT</a>
-        <a style="color:#d4d4d4;font-weight:bold;" href="#">TERMS OF SERVICE</a>
-        <a style="color:#d4d4d4;font-weight:bold;" href="#">PRIVACY POLICY</a>
-
-</div>
-<p style="color:#d4d4d4;font-size:12px;">Project designed by Karan Maulekhi. Student of arena animation at Patel Nager</p>
-</div>
-
-<style>
-    @media(max-width:769px)
-    {
-        .jon-text{
-            flex-direction:column;
+    <style>
+        #footer {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
         }
-        .jon-text-2{
-            flex-direction:column-reverse;
+
+        #section-6 {
+            background: #4169e1;
+
+
         }
-        .jony-img{
-            text-align:center;
+
+        #support {
+            color: white;
         }
-        .footer-text{
-            flex-direction:column;
+
+        @media(max-width:1178px) {
+
+            #display,
+            #display-2,
+            #carder,
+            .section-3-half,
+            #section-2 {
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+            }
+
+            .cheap {
+                text-align: center;
+                margin-bottom: 32px;
+            }
         }
+
+        @media(max-width:768px) {
+            #footer {
+                flex-direction: column;
+            }
         }
-        @media(max-width:765px){
-            .om-img{
+
+        @media(max-width:800px) {
+
+            .pay-container,
+            #nav {
                 display: none;
             }
-            .bgmi-img{
-                display:none;
+        }
+
+        @media(max-width:617px) {
+            #travel-pay {
+                display: none;
             }
-            .heading-2{
-                margin-bottom: 16px;
-                margin-top:12px;
+        }
+
+        @media(max-width:520px) {
+
+            #article-11,
+            #article-22 {
+                display: none;
             }
         }
-    @media(max-width:426px){
-        .jony-flex{
-            flex-direction:column;
+
+        @media(max-width:375px) {
+            .offer-card-2 {
+                max-width: 320px;
+                width: 100%;
+            }
+
+            #qw {
+                display: none;
+            }
+
         }
-        .raise-flex{
-            flex-direction:column;
+
+        .img-text-card {
+            width: 100%;
         }
-        .jonny-card{
-            flex-direction:column;
-            gap:12px;
+
+        h3 {
+            font-size: 16px;
         }
-        .review-container-out{
-            flex-direction:column;
+
+        @media(max-width:1232px) {
+
+            #nav-card,
+            #main-head,
+            #offer-heading,
+            #footer,
+            .hi,
+            #carder,
+            #section-2 {
+                padding-inline: 16px;
+            }
         }
-        .about-jony-container{
-            flex-direction:column;
+
+        @media(max-width:450px) {
+            #as {
+                display: none;
+            }
         }
-        .om-img{
-            display:none;
+        @media(max-width:588px) {
+            .what-offer{
+                 font-size: 28px;
+            }
+            #Add{
+                font-size: 14px;
+            }
         }
-        .trophy{
-            width:100%;
-        }
-        .bgmi-img{
-            display:none;
-        }
-        .top-text{
-            font-size:14px;
-        }
-        .sub-paragraph{
-            text-align:left;
-        }
-        .reverse-2nd{
-            flex-direction: column-reverse;
-        }
-        .review-head{
-            font-size:32px !important;
-        }
-        .review-pa{
-            font-size:16px !important;
-        }
-    }
-    @media(max-width:321px){
-        .m-0{
-      margin-left:0;
-        }
-    }
-    @media(max-width:321px){
-        .om-img{
-            display:none;
-        }
-    }
-    @media(max-width:350px){
-.head-container {
-    display: none;
-}
-    }
-</style>
+    </style>
+
 
 </body>
+
 </html>
